@@ -71,7 +71,7 @@ export const Notes = () => {
     const deleteTask = (id) => {
         setFocus(false);
         
-        axios.delete(`http://localhost:5000/api/${id}`).then(
+        axios.delete(`https://freedom-board-princess.herokuapp.com/api/${id}`).then(
             (result) => {
             setFocus(false)
             setListOfTasks(listOfTasks.filter((task) => {
