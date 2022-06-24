@@ -58,7 +58,7 @@ export const Notes = () => {
         setTask(newText);
         console.log(`id: ${id}`)
         
-        return axios.put(`http://localhost:5000/api/${id}`, {
+        return axios.put(`https://freedom-board-princess.herokuapp.com/api/${id}`, {
             text : newText,
           }).then(result => {
             console.log(`${newText}  has been saved`);
