@@ -21,7 +21,7 @@ function App() {
     setTimeout(() => {
       setLoading(false);
     },1500);
-    axios.get('http://localhost:5000/api/').then(result => {
+    axios.get('https://freedom-board-princess.herokuapp.com/api/').then(result => {
       console.log(result.data.data);
       setListOfTasks(result.data.data);
       

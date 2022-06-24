@@ -13,17 +13,11 @@ export const CreateModal = () => {
 
     
 
-    const checkLength = (text) => {
-        if (text.length > 70){
-            setTask(text)
-        } else{
-            alert('70 characters only')
-        }
-    }
+    // j
     const createTask = (e) => {
        
         e.preventDefault();
-        axios.post('http://localhost:5000/api/', {
+        axios.post('https://freedom-board-princess.herokuapp.com/api', {
           text : task || "Empty Message",
           author : author  || "Anonymous",
           color : "bg-nyellow",

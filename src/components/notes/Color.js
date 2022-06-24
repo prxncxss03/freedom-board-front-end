@@ -1,11 +1,10 @@
-import { useState ,useContext,useEffect} from 'react';
+import { useState ,useContext} from 'react';
 import { ColorChange } from '../../helper/Context';
 import axios from 'axios';
 
 
 export const ColorComponent = ({taskId ,focus}) => {
     const [color,setColor] = useState('')
-    const [idF,setIdF] = useState(null);
     const { colorChange ,setColorChange } = useContext(ColorChange);
     
 
@@ -51,7 +50,7 @@ export const ColorComponent = ({taskId ,focus}) => {
     
     const handleColor = (color,id) => {
         setColorChange(color);
-        return axios.put(`http://localhost:5000/api/color/${id}`, {
+        return axios.put(`https://freedom-board-princess.herokuapp.com/api/color/${id}`, {
             color,
           }).then(result => {
             console.log(`${color}  has been saved`);
