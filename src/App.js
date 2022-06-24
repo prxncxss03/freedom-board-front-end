@@ -6,8 +6,10 @@ import axios from 'axios';
 import { Navigation } from './components/Navigation';
 import { CreateModal } from './components/modals/CreateModal';
 import {Footer} from './components/Footer';
-function App() {
 
+
+function App() {
+  axios.defaults.headers.post['Content-Type'] ='application/x-www-form-urlencoded';
   const [task, setTask] = useState('');
   const [focus, setFocus] = useState(false);
   const [listOfTasks, setListOfTasks] = useState([]);

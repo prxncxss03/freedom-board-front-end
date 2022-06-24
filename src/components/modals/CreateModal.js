@@ -57,7 +57,7 @@ export const CreateModal = () => {
 
                     <label htmlFor="todoItem" className="mb-3  font-indie font-bold text-3xl text-center text-orange-700">ENTER YOUR MESSAGE</label>
                     
-                    <input autocomplete="off" value={task} onChange={(e) => setTask(e.target.value)} type="text" name="todoItem" placeholder='“When life gives you lemons, make lemonade.”'className="break-words font-semibold outline-none border-b-2 mt-3 border-fawn text-xl text-black px-1"/>
+                    <input autoComplete="off" value={task} onChange={(e) => setTask(e.target.value)} type="text" name="todoItem" placeholder='“When life gives you lemons, make lemonade.”'className="break-words font-semibold outline-none border-b-2 mt-3 border-fawn text-xl text-black px-1"/>
                     <div className='mt-3 self-end font-semibold w-[49%] flex'>
                         <label  htmlFor="author" className="text-xl mr-2">by : </label>
                         <input  autocomplete="off" value={author} onChange={(e) => setAuthor(e.target.value)} type="text" name="author" placeholder="John Doe" className=" break-words outline-none border-b-2 px-1  border-fawn text-xl text-black"/>
