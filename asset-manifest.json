@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/freedom-board-front-end/static/css/main.da5b9470.css",
-    "main.js": "/freedom-board-front-end/static/js/main.9fcf3f62.js",
+    "main.js": "/freedom-board-front-end/static/js/main.852c6238.js",
     "static/js/787.c4e7f8f9.chunk.js": "/freedom-board-front-end/static/js/787.c4e7f8f9.chunk.js",
     "index.html": "/freedom-board-front-end/index.html",
     "main.da5b9470.css.map": "/freedom-board-front-end/static/css/main.da5b9470.css.map",
-    "main.9fcf3f62.js.map": "/freedom-board-front-end/static/js/main.9fcf3f62.js.map",
+    "main.852c6238.js.map": "/freedom-board-front-end/static/js/main.852c6238.js.map",
     "787.c4e7f8f9.chunk.js.map": "/freedom-board-front-end/static/js/787.c4e7f8f9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.da5b9470.css",
-    "static/js/main.9fcf3f62.js"
+    "static/js/main.852c6238.js"
   ]
 }
