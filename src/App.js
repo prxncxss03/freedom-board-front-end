@@ -23,8 +23,6 @@ function App() {
     setTimeout(() => {
       setLoading(false);
     },1500);
-    res.send.Header("Access-Control-Allow-Origin", "https://prxncxss03.github.io")
-	  c.Header("Access-Control-Allow-Methods", "GET, OPTIONS, POST, PUT")
 
     axios.get('https://freedom-board-princess.herokuapp.com/api/').then(result => {
       console.log(result.data.data);
