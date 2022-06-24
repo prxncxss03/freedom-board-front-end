@@ -9,7 +9,7 @@ import {Footer} from './components/Footer';
 
 
 function App() {
-  axios.defaults.headers.post['Content-Type'] ='application/x-www-form-urlencoded';
+
   const [task, setTask] = useState('');
   const [focus, setFocus] = useState(false);
   const [listOfTasks, setListOfTasks] = useState([]);
@@ -23,6 +23,9 @@ function App() {
     setTimeout(() => {
       setLoading(false);
     },1500);
+    res.send.Header("Access-Control-Allow-Origin", "https://prxncxss03.github.io")
+	  c.Header("Access-Control-Allow-Methods", "GET, OPTIONS, POST, PUT")
+
     axios.get('https://freedom-board-princess.herokuapp.com/api/').then(result => {
       console.log(result.data.data);
       setListOfTasks(result.data.data);
