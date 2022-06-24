@@ -1,13 +1,110 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@import url('https://fonts.googleapis.com/css2?family=Fascinate&family=Indie+Flower&display=swap');
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    html ,body{
+      @apply  relative;
+  
+    }
+    .main {
+      @apply h-screen  scroll-smooth scroll-p-0.5 scroll-m-0 bg-[#836953] font-indie select-none flex flex-col justify-between transition-all ease-in-out duration-200;
+    }
+    
+    .button-x-triggered{
+      @apply absolute top-0 right-0 text-white animate-bounce hover:animate-none text-3xl font-bold m-5 hover:text-red-400;
+    }
+   
+    .note-focused {
+      @apply flex flex-col justify-between transition-all ease-in-out m-auto duration-500 absolute z-40  scale-150 break-words w-[60%] h-[50%] px-8 pb-4 left-0 right-0 bottom-0 top-0;
+    }
+
+    .note-normal{
+      @apply transition-all hover:border-white border-2 cursor-pointer border-transparent ease-in-out duration-500   w-fit h-fit px-10 pt-5 pb-2 m-4  hover:shadow-lg hover:scale-105 relative;
+    }
+
+    .note-wrapper-triggered {
+      @apply overflow-hidden absolute min-h-full left-0 right-0 bottom-0 top-0 bg-black/[.9] z-50 ;
+    }
+
+    .create-modal-active{
+      @apply overflow-hidden h-full absolute flex-col bg-[#836953]/[.99]  right-0 left-0 bottom-0 top-0 z-50 flex justify-center items-center ;
+    }
+
+    
+    .green-color-item{
+      @apply bg-[#B5EAD7]  w-6   hover:shadow-xl rounded-full hover:border-yellow-900    ease-in-out transition-all duration-300  mt-4 mx-1 px-4 pt-3  shadow-md;
+    }
+    
+    
+    
+    .violet-color-item{
+      @apply bg-[#E0BBE4] w-6   hover:shadow-xl rounded-full hover:border-yellow-900    ease-in-out transition-all duration-300  mt-4 mx-1 px-4 pt-3  shadow-md;
+    }
+    .peach-color-item{
+      @apply bg-[#FFDAC1] w-6  rounded-full hover:shadow-xl  hover:border-yellow-900    ease-in-out transition-all duration-300  mt-4 mx-1 px-4 pt-3  shadow-md;
+    }
+
+    .yellow-color-item {
+      @apply bg-[#fdfd96] w-6  rounded-full hover:shadow-xl hover:border-yellow-900    ease-in-out transition-all duration-300  mt-4 mx-1 px-4 pt-3 shadow-md;
+    }
+
+    .blue-color-item {
+      @apply bg-[#BFD9D6] w-6  rounded-full hover:shadow-xl hover:border-yellow-900    ease-in-out transition-all duration-300  mt-4 mx-1 px-4 pt-3  shadow-md;
+    }
+
+    .author-name {
+      @apply  bg-clip-text  rounded-full text-transparent bg-gradient-to-r from-amber-800 to-pink-800 text-xl font-bold pt-3;
+    }
+
+    .color-item{
+      @apply border-2 border-transparent cursor-pointer;
+    }
+
+    .btn-delete {
+      @apply group-hover:text-red-500 text-transparent hover:font-bold ease-in  transition-all duration-300  self-end;
+    }
+
+    .btn-delete-focus {
+      @apply text-red-500 hover:font-bold ease-in  transition-all duration-300  self-end pl-4 translate-y-1;
+    }
+
+  
+
+    .list-color {
+      @apply   flex  items-center  translate-x-[-5px];
+    }
+
+    .scrollbar::-webkit-scrollbar {
+      width: 3px;
+      height: 8px;
+      opacity:0.9;
+      
+      
+    }
+  
+  .scrollbar::-webkit-scrollbar-track {
+      border-radius: 100vh;
+      background: transparent;
+      
+  }
+  
+  .scrollbar::-webkit-scrollbar-thumb {
+      background: #e0cbcb;
+      border-radius: 100vh;
+      border: 3px solid transparent;
+   
+      
+  }
+  
+  .scrollbar::-webkit-scrollbar-thumb:hover {
+      background: #c0a0b9;
+  }
+
+  
+
+
+  }
+
