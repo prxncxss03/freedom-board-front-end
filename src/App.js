@@ -22,7 +22,7 @@ function App() {
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
-    },1500);
+    },2500);
 
     axios.get('https://freedom-board-princess.herokuapp.com/api/').then(result => {
       console.log(result.data.data);
