@@ -20,19 +20,33 @@ function App() {
 //  fetch all the data from the database
   useEffect (() => {
     setLoading(true);
-    setTimeout(() => {
+    const onPageLoad = () => {
       setLoading(false);
-    },2500);
+    };
+
+
+    
 
     axios.get('https://freedom-board-princess.herokuapp.com/api/').then(result => {
       console.log(result.data.data);
       setListOfTasks(result.data.data);
+          // Check if the page has already loaded
+      if (document.readyState === "complete") {
+        onPageLoad()
+      } else {
+        window.addEventListener("load", onPageLoad);
+        // Remove the event listener when component unmounts
+        return () => window.removeEventListener("load", onPageLoad);
+      }
+   
       
     }).catch(err => {
       console.log(`err : ${err}`);
     })
   },[])
 
+ 
+    
 
   return (
      
