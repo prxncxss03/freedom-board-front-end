@@ -160,7 +160,7 @@ export const Notes = () => {
 const MainNoteContent = ({focus,fIndex, onChange,index, text,onBlur,date}) => {
     return (
 
-        <div className='scroll-px-0 overflow-y-auto pr-2 scrollbar flex flex-col break-all'>
+        <div className='scroll-px-0 overflow-y-auto pr-2 scrollbar flex flex-col break-words'>
             <p className={focus == true  && index === fIndex  ? 'hidden' : ' lg:block hidden text-2xl text-center drop-shadow-sm mb-1'}>🔴</p>
             <p contentEditable={true} suppressContentEditableWarning={true}
             
