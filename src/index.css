@@ -28,9 +28,16 @@
     .note-focused {
       @apply flex  rounded-lg flex-col justify-between transition-all ease-in-out m-auto duration-500 absolute z-40  scale-150 break-words md:w-[50%] sm:w-[55%]  w-[63%] min-h-fit max-h-[50%] sm:max-h-[40%] scrollbar md:px-8 px-3 sm:px-6 sm:pb-4 pb-1 left-0 right-0 bottom-0 top-0;
     }
+    .time {
+      @apply mt-2  lg:text-base text-gray-500;
+    }
+
+    .author-wrapper {
+      @apply w-full flex justify-end items-center;
+    }
 
     .note-normal{
-      @apply text-base rounded-lg transition-all hover:border-white border-2 cursor-pointer border-transparent ease-in-out duration-500  w-fit h-fit sm:px-10 px-5 pt-5 pb-2 sm:m-4 mx-3 my-2 hover:shadow-lg hover:scale-105 relative;
+      @apply text-base rounded-lg transition-all hover:border-white border-2 cursor-pointer border-transparent ease-in-out duration-500  w-fit h-fit sm:px-10 px-5 pt-5 pb-2 sm:m-4 mx-4 my-2 hover:shadow-lg hover:scale-105 relative;
     }
 
     .note-wrapper-triggered {
@@ -68,7 +75,7 @@
     }
 
     .author-name {
-      @apply  bg-clip-text  rounded-full text-transparent bg-gradient-to-r from-amber-800 to-pink-800 sm:text-xl text-lg font-bold sm:pt-3 pt-1;
+      @apply  bg-clip-text  rounded-full text-transparent bg-gradient-to-r from-amber-800 to-pink-800 font-bold sm:pt-3 pt-1;
     }
 
     .color-item{
@@ -78,7 +85,7 @@
     }
 
     .mobile-btns {
-      @apply mr-2 p-2 rounded-full;
+      @apply mr-2 p-1 rounded-full;
     }
 
     .btn-delete {
@@ -86,7 +93,7 @@
     }
 
     .btn-delete-focus {
-      @apply text-red-500 hover:font-bold ease-in  transition-all duration-300  self-end sm:pl-4  my-2 sm:m-0 translate-y-1;
+      @apply text-red-500 hover:font-bold ease-in  text-sm transition-all duration-300  self-end sm:pl-4  my-2 sm:m-0 translate-y-1;
     }
 
   

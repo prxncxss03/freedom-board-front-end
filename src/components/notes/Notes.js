@@ -114,35 +114,35 @@ export const Notes = () => {
                                     <MainNoteContent date={formatDate(task.date)} onChange={() => {setShowColor(false)}} focus={focus} fIndex={fIndex} index={index} onBlur={(e) => {saveTask(task._id,e.currentTarget.textContent)}} text={task.text}></MainNoteContent>
                                     
                                     <div>
-                                    <div className='w-full flex justify-end text-lg items-center'>
-                                        <p className='author-name mr-1'>- </p>
-                                        <p className='author-name hover:cursor-not-allowed px-1 text-base sm:text-lg'>{task.author}</p>
+                                    <div className={focus ===  true && index === fIndex ? "author-wrapper " : "author-wrapper " }>
+                                        <p className={focus === true  && index === fIndex ?  'author-name mr-1 text-[0.6rem]' : 'author-name mr-1 '}>- </p>
+                                        <p className={focus === true  && index === fIndex ? 'author-name hover:cursor-not-allowed px-1 text-sm lg:text-lg': 'author-name hover:cursor-not-allowed px-1 text-base lg:text-lg'}>{task.author}</p>
                                     </div>
-                                    <div className={focus === true ? "flex sm:hidden  relative items-center justify-between" : "hidden"}>
+                                    <div className={focus === true  && index === fIndex ? "flex sm:hidden  relative items-center justify-between" : "hidden"}>
                                         {/* mobile */}
-                                        <div className="flex items-center">
-                                            <CopyToClipboard text={task.text} className={focus !== true ? 'hidden' : 'mobile-btns flex sm:ml-8 ml:0 items-center'} >
-                                                <div className='flex'>
-                                                    <button onClick={handleClip} className='hover:bg-white flex justify-center items-center p-1 sm:w-6 w-[1.3rem] h-[1.3rem] sm:h-6 sm:aspect-square rounded-full'>{clip !== true ? <BsClipboard  strokeWidth={0.5}></BsClipboard> : <BsClipboardCheck strokeWidth={0.5}></BsClipboardCheck>}</button>
+                                        <div className="flex items-center ">
+                                            <CopyToClipboard text={task.text} className={focus !== true  && index === fIndex  ? 'hidden' : 'mobile-btns flex sm:ml-8 ml:0 items-center'} >
+                                                <div className='flex items-center'>
+                                                    <button onClick={handleClip} className='hover:bg-white flex justify-center items-center p-1 sm:w-6 w-[1.3rem] h-[1.3rem] sm:h-6 sm:aspect-square rounded-full'>{clip !== true ? <BsClipboard  strokeWidth={0.5} size={11}></BsClipboard> : <BsClipboardCheck size={11} strokeWidth={0.5}></BsClipboardCheck>}</button>
                                                 </div>
                                             </CopyToClipboard>
-                                            <div  >
+                                            <div className="flex items-center">
                                                 <div onClick={() => setShowColor(false)}  className={showColor === true ? 'flex items-center h-fit top-[-2.5rem] left-[-0.5rem] pb-2 rounded-lg absolute bg-white ease-in-out transition-all duration-300' : '  hidden '} >
                                                     {console.log(showColor)}
                                                     <ColorComponent taskId={task._id} focus={focus}></ColorComponent>
-                                                    <VscTriangleDown className="absolute bottom-[-0.6rem] ml-16  " color='white'></VscTriangleDown>
+                                                    <VscTriangleDown className="absolute bottom-[-0.6rem] ml-[3rem]  " color='white'></VscTriangleDown>
                                                 </div>
                                             
-                                                <button  onClick={showColorPalette} className={showColor ? "mobile-btns bg-white " : "mobile-btns bg-transparent"} ><MdOutlineColorLens></MdOutlineColorLens></button>
+                                                <button  onClick={showColorPalette} className={showColor ? "mobile-btns bg-white " : "mobile-btns bg-transparent"} ><MdOutlineColorLens size={13}></MdOutlineColorLens></button>
                                             </div>
                                         </div>
-                                        <button onClick={() => { deleteTask(task._id)  }} className="mobile-btns hover:text-red-400"><MdDelete></MdDelete></button>
+                                        <button onClick={() => { deleteTask(task._id)  }} className="mobile-btns hover:text-red-400"><MdDelete size={12}></MdDelete></button>
                                     </div>
                                     <div className='sm:flex hidden sm:items-center  sm:flex-row flex-col-reverse'>
                                         
                                         <CopyToClipboardComponent  clip={clip} focus={focus} text ={task.text} handleClip ={handleClip} clipVal={clipVal}></CopyToClipboardComponent>
                                     </div>
-                                    <div className={focus === true ? 'sm:flex hidden  sm:justify-between sm:items-center justify-end w-full sm:flex-row flex-col ' : 'sm:flex hidden  justify-end w-full '} >
+                                    <div className={focus ===  true && index === fIndex  ? 'sm:flex hidden  sm:justify-between sm:items-center justify-end w-full sm:flex-row flex-col ' : 'sm:flex hidden  justify-end w-full '} >
                                         <ColorComponent taskId={task._id} focus={focus}></ColorComponent>
                                         <button onClick={() => { deleteTask(task._id)  }} className={focus === true ? 'btn-delete-focus ' : 'hidden'}>Delete</button>
                                     </div>
@@ -161,16 +161,15 @@ const MainNoteContent = ({focus,fIndex, onChange,index, text,onBlur,date}) => {
     return (
 
         <div className='scroll-px-0 overflow-y-auto pr-2 scrollbar flex flex-col break-all'>
-            <p className={focus == true  && index === fIndex  ? 'hidden' : ' text-2xl text-center drop-shadow-sm mb-1'}>🔴</p>
+            <p className={focus == true  && index === fIndex  ? 'hidden' : ' lg:block hidden text-2xl text-center drop-shadow-sm mb-1'}>🔴</p>
             <p contentEditable={true} suppressContentEditableWarning={true}
             
             onBlur={onBlur} onChange={onChange}
             
-            className={focus === true ? "outline-none break-words  text-base sm:text-lg    mb-4 " : "outline-none  sm:text-lg text-base  mb-4"}>
+            className={focus === true ? "outline-none break-words  text-sm lg:text-lg    mb-4 " : "outline-none  lg:text-lg text-base  mb-4"}>
                 <br></br>{text}
             </p>
-            <p className='mt-2 text-xs
-             sm:text-md text-gray-500'>{date}</p>
+            <p className={focus === true? "text-[0.7rem] time" : "text-xs time"}>{date}</p>
                         
         </div>
     )
@@ -181,8 +180,8 @@ const CopyToClipboardComponent = ({focus,text,handleClip,clipVal,clip}) => {
       return (
         <CopyToClipboard className={focus !== true ? 'hidden' : 'flex  ml-0 items-center group'} text={text} >
             <div className='flex bg-white group-hover:shadow-lg rounded-lg'>
-                <button onClick={handleClip} className='bg-white flex justify-center items-center sm:p-3 sm:w-fit w-[1.3rem] h-[1.3rem] sm:h-6 sm:aspect-auto aspect-square rounded-full sm:rounded-xl'>{clip !== true ? <BsClipboard ></BsClipboard> : <BsClipboardCheck ></BsClipboardCheck>}
-                    <p className='font-bold sm:md text-sm ml-2 text-yellow-800 self-center '>{clipVal}</p>
+                <button onClick={handleClip} className='bg-white flex justify-center items-center sm:p-3 sm:w-fit w-[1.3rem] h-[1.3rem] sm:h-6 sm:aspect-auto aspect-square rounded-full sm:rounded-xl'>{clip !== true ? <BsClipboard size={15}></BsClipboard> : <BsClipboardCheck size={15} ></BsClipboardCheck>}
+                    <p className='font-bold  text-xs ml-2 text-yellow-800 self-center '>{clipVal}</p>
                 </button>
                
             </div>
