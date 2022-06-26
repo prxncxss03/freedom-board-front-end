@@ -64,7 +64,7 @@ function App() {
                       <CreateModal ></CreateModal>
                         <div className='bg-inherit'>
                           <Navigation cmshow={() => setShowModal(true)}/>
-                            <div className='flex items-center flex-col bg-inherit px-10 py-5'>
+                            <div className='flex items-center flex-col bg-inherit sm:px-2 md:px-10 py-5'>
                               <div className='flex flex-wrap justify-center '>
                                 
                                 <Notes ></Notes>

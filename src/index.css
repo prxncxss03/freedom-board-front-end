@@ -18,7 +18,7 @@
     }
    
     .note-focused {
-      @apply flex flex-col justify-between transition-all ease-in-out m-auto duration-500 absolute z-40  scale-150 break-words w-[60%] h-[50%] px-8 pb-4 left-0 right-0 bottom-0 top-0;
+      @apply flex flex-col justify-between transition-all ease-in-out m-auto duration-500 absolute z-40  scale-150 break-words w-[60%] h-[50%] sm:px-8 px-3 sm:pb-4 pb-1 left-0 right-0 bottom-0 top-0;
     }
 
     .note-normal{
@@ -35,32 +35,34 @@
 
     
     .green-color-item{
-      @apply bg-[#B5EAD7]  w-6   hover:shadow-xl rounded-full hover:border-yellow-900    ease-in-out transition-all duration-300  mt-4 mx-1 px-4 pt-3  shadow-md;
+      @apply bg-[#B5EAD7]   ;
     }
     
     
     
     .violet-color-item{
-      @apply bg-[#E0BBE4] w-6   hover:shadow-xl rounded-full hover:border-yellow-900    ease-in-out transition-all duration-300  mt-4 mx-1 px-4 pt-3  shadow-md;
+      @apply bg-[#E0BBE4]  ;
     }
     .peach-color-item{
-      @apply bg-[#FFDAC1] w-6  rounded-full hover:shadow-xl  hover:border-yellow-900    ease-in-out transition-all duration-300  mt-4 mx-1 px-4 pt-3  shadow-md;
+      @apply bg-[#FFDAC1]  ;
     }
 
     .yellow-color-item {
-      @apply bg-[#fdfd96] w-6  rounded-full hover:shadow-xl hover:border-yellow-900    ease-in-out transition-all duration-300  mt-4 mx-1 px-4 pt-3 shadow-md;
+      @apply bg-[#fdfd96]  ;
     }
 
     .blue-color-item {
-      @apply bg-[#BFD9D6] w-6  rounded-full hover:shadow-xl hover:border-yellow-900    ease-in-out transition-all duration-300  mt-4 mx-1 px-4 pt-3  shadow-md;
+      @apply bg-[#BFD9D6]  ;
     }
 
     .author-name {
-      @apply  bg-clip-text  rounded-full text-transparent bg-gradient-to-r from-amber-800 to-pink-800 text-xl font-bold pt-3;
+      @apply  bg-clip-text  rounded-full text-transparent bg-gradient-to-r from-amber-800 to-pink-800 sm:text-xl text-lg font-bold sm:pt-3 pt-1;
     }
 
     .color-item{
-      @apply border-2 border-transparent cursor-pointer;
+      @apply border-2 border-transparent cursor-pointer sm:w-6 w-6 aspect-square
+      rounded-full hover:shadow-xl hover:border-yellow-900    ease-in-out transition-all duration-300  mt-4 mx-1 sm:px-4 p-0 sm:pt-3  shadow-md
+      ;
     }
 
     .btn-delete {
@@ -68,13 +70,13 @@
     }
 
     .btn-delete-focus {
-      @apply text-red-500 hover:font-bold ease-in  transition-all duration-300  self-end pl-4 translate-y-1;
+      @apply text-red-500 hover:font-bold ease-in  transition-all duration-300  self-end sm:pl-4  my-2 sm:m-0 translate-y-1;
     }
 
   
 
     .list-color {
-      @apply   flex  items-center  translate-x-[-5px];
+      @apply   flex  items-center  flex-wrap sm:py-0 translate-x-[-5px];
     }
 
     .scrollbar::-webkit-scrollbar {

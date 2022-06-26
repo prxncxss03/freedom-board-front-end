@@ -103,13 +103,13 @@ export const Notes = () => {
                                         <p className='author-name mr-1'>- </p>
                                         <p className='author-name hover:cursor-not-allowed px-1'>{task.author}</p>
                                     </div>
-                                    <div className='flex items-center '>
-                                        <p className='mt-2'>{formatDate(task.date)}</p>
+                                    <div className='flex sm:items-center  sm:flex-row flex-col-reverse'>
+                                        <p className='mt-2 text-sm sm:text-base'>{formatDate(task.date)}</p>
                                         <CopyToClipboardComponent  clip={clip} focus={focus} text ={task.text} handleClip ={handleClip} clipVal={clipVal}></CopyToClipboardComponent>
                                     </div>
-                                    <div className={focus === true ? 'flex justify-between items-center  w-full ' : 'flex justify-end w-full '} >
+                                    <div className={focus === true ? 'flex sm:justify-between sm:items-center justify-end w-full flex-wrap' : 'flex-wrap flex justify-end w-full '} >
                                         <ColorComponent taskId={task._id} focus={focus}></ColorComponent>
-                                        <button onClick={() => { deleteTask(task._id)  }} className={focus === true ? 'btn-delete-focus' : 'hidden'}>Delete</button>
+                                        <button onClick={() => { deleteTask(task._id)  }} className={focus === true ? 'btn-delete-focus ' : 'hidden'}>Delete</button>
                                     </div>
                                 </div>
                     
@@ -131,7 +131,7 @@ const MainNoteContent = ({focus,fIndex, index, text,onBlur}) => {
             
             onBlur={onBlur}
             
-            className={focus === true ? "outline-none break-words text-2xl font-indie font-bold mb-8 " : "outline-none text-2xl font-indie font-bold mb-8 "}>
+            className={focus === true ? "outline-none break-words sm:text-2xl text-xl font-indie font-bold sm:mb-8 mb-4 " : "outline-none sm:text-2xl text-xl font-indie font-bold mb-8"}>
                 <br></br>{text}
             </p>
                         
@@ -142,7 +142,7 @@ const MainNoteContent = ({focus,fIndex, index, text,onBlur}) => {
 const CopyToClipboardComponent = ({focus,text,handleClip,clipVal,clip}) => {
     
       return (
-        <CopyToClipboard className={focus !== true ? 'hidden' : 'flex ml-8 items-center'} text={text} >
+        <CopyToClipboard className={focus !== true ? 'hidden' : 'flex sm:ml-8 ml:0 items-center'} text={text} >
             <div className='flex'>
                 <button onClick={handleClip} className='bg-white flex justify-center items-center p-1 w-6 h-6 aspect-square rounded-full'>{clip !== true ? <BsClipboard size={30}></BsClipboard> : <BsClipboardCheck size={30}></BsClipboardCheck>}</button>
                 <p className='font-bold ml-2 text-yellow-800 self-center '>{clipVal}</p>
