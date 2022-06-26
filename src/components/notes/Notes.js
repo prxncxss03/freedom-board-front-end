@@ -107,7 +107,7 @@ export const Notes = () => {
                                         <p className='mt-2 text-sm sm:text-base'>{formatDate(task.date)}</p>
                                         <CopyToClipboardComponent  clip={clip} focus={focus} text ={task.text} handleClip ={handleClip} clipVal={clipVal}></CopyToClipboardComponent>
                                     </div>
-                                    <div className={focus === true ? 'flex sm:justify-between sm:items-center justify-end w-full flex-wrap' : 'flex-wrap flex justify-end w-full '} >
+                                    <div className={focus === true ? 'flex sm:justify-between sm:items-center justify-end w-full sm:flex-row flex-col ' : 'sm:flex-row flex-col flex justify-end w-full '} >
                                         <ColorComponent taskId={task._id} focus={focus}></ColorComponent>
                                         <button onClick={() => { deleteTask(task._id)  }} className={focus === true ? 'btn-delete-focus ' : 'hidden'}>Delete</button>
                                     </div>
@@ -144,8 +144,8 @@ const CopyToClipboardComponent = ({focus,text,handleClip,clipVal,clip}) => {
       return (
         <CopyToClipboard className={focus !== true ? 'hidden' : 'flex sm:ml-8 ml:0 items-center'} text={text} >
             <div className='flex'>
-                <button onClick={handleClip} className='bg-white flex justify-center items-center p-1 w-6 h-6 aspect-square rounded-full'>{clip !== true ? <BsClipboard size={30}></BsClipboard> : <BsClipboardCheck size={30}></BsClipboardCheck>}</button>
-                <p className='font-bold ml-2 text-yellow-800 self-center '>{clipVal}</p>
+                <button onClick={handleClip} className='bg-white flex justify-center items-center p-1 sm:w-6 w-[1.3rem] h-[1.3rem] sm:h-6 sm:aspect-square rounded-full'>{clip !== true ? <BsClipboard size={30}></BsClipboard> : <BsClipboardCheck size={30}></BsClipboardCheck>}</button>
+                <p className='font-bold sm:text-base text-sm ml-2 text-yellow-800 self-center '>{clipVal}</p>
             </div>
         </CopyToClipboard>
       )
