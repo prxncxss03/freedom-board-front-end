@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/freedom-board-front-end/static/css/main.c4013e7e.css",
-    "main.js": "/freedom-board-front-end/static/js/main.f0e49c75.js",
+    "main.css": "/freedom-board-front-end/static/css/main.9030bc5b.css",
+    "main.js": "/freedom-board-front-end/static/js/main.49955506.js",
     "static/js/787.c4e7f8f9.chunk.js": "/freedom-board-front-end/static/js/787.c4e7f8f9.chunk.js",
     "index.html": "/freedom-board-front-end/index.html",
-    "main.c4013e7e.css.map": "/freedom-board-front-end/static/css/main.c4013e7e.css.map",
-    "main.f0e49c75.js.map": "/freedom-board-front-end/static/js/main.f0e49c75.js.map",
+    "main.9030bc5b.css.map": "/freedom-board-front-end/static/css/main.9030bc5b.css.map",
+    "main.49955506.js.map": "/freedom-board-front-end/static/js/main.49955506.js.map",
     "787.c4e7f8f9.chunk.js.map": "/freedom-board-front-end/static/js/787.c4e7f8f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c4013e7e.css",
-    "static/js/main.f0e49c75.js"
+    "static/css/main.9030bc5b.css",
+    "static/js/main.49955506.js"
   ]
 }
