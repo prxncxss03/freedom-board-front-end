@@ -61,7 +61,7 @@
 
     .color-item{
       @apply border-2 border-transparent cursor-pointer sm:w-6 w-8 flex-shrink h-4 sm:aspect-auto
-      rounded-full hover:shadow-xl hover:border-yellow-900    ease-in-out transition-all duration-300  mt-4 mx-1 sm:px-4 p-0 sm:pt-3  shadow-md
+      rounded-full hover:shadow-xl hover:border-yellow-900    ease-in-out transition-all duration-300  mt-2 mx-1 sm:px-4 p-0 sm:pt-3  shadow-md
       ;
     }
 
@@ -76,7 +76,7 @@
   
 
     .list-color {
-      @apply   flex  items-center  flex-wrap sm:py-0 translate-x-[-5px];
+      @apply   flex  items-center  flex-wrap sm:py-0 translate-x-[-5px] mt-2;
     }
 
     .scrollbar::-webkit-scrollbar {

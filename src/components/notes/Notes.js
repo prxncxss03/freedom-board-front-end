@@ -131,7 +131,7 @@ const MainNoteContent = ({focus,fIndex, index, text,onBlur}) => {
             
             onBlur={onBlur}
             
-            className={focus === true ? "outline-none break-words sm:text-2xl text-xl font-indie font-bold sm:mb-8 mb-4 " : "outline-none sm:text-2xl text-xl font-indie font-bold mb-8"}>
+            className={focus === true ? "outline-none break-words sm:text-2xl text-lg font-indie font-bold sm:mb-8 mb-4 " : "outline-none sm:text-2xl text-xl font-indie font-bold mb-8"}>
                 <br></br>{text}
             </p>
                         
