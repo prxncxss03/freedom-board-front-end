@@ -19,8 +19,10 @@ module.exports = {
         
       },
       fontFamily: {
-        fascinate : ['Fascinate', 'sans-serif'],
-        indie : ['Indie Flower', 'sans-serif'],
+        vietnam : ['Be Vietnam Pro', 'sans-serif'],
+        sofia: ['Sofia Pro', 'sans-serif'],
+        apple: ['apple', 'sans-serif'],
+      
       }
     },
   },
