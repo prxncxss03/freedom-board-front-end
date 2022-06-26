@@ -93,7 +93,7 @@ export const Notes = () => {
                 <ColorChange.Provider value ={{colorChange ,setColorChange}}>
                     {listOfTasks.map((task,index) => {
                         return (
-                            <div key={task._id}  className={focus === true  && index === fIndex ? 'note-wrapper-triggered ' : 'note-wrapper'}>
+                            <div key={task._id}  className={focus === true  && index === fIndex ? 'note-wrapper-triggered ' : 'note-wrapper '}>
                                 <button onClick={closeNotesBtn}  className={focus === true ? 'button-x-triggered' : 'hidden'}>X</button>
                                 <div  onClick={() => {handleFocus(index,task.color)}}  className={focus ===true  && index === fIndex ? `note-focused group ${colorChange !== '' && index === fIndex ? colorChange : task.color }` : `note-normal group ${colorChange !== '' && index === fIndex ? colorChange : task.color }`} >
                                     <MainNoteContent focus={focus} fIndex={fIndex} index={index} onBlur={(e) => {saveTask(task._id,e.currentTarget.textContent)}} text={task.text}></MainNoteContent>
@@ -125,7 +125,7 @@ export const Notes = () => {
 const MainNoteContent = ({focus,fIndex, index, text,onBlur}) => {
     return (
 
-        <div className='scroll-px-0 overflow-y-auto pr-2 scrollbar flex flex-col'>
+        <div className='scroll-px-0 overflow-y-auto pr-2 scrollbar flex flex-col break-all'>
             <p className={focus == true  && index === fIndex  ? 'hidden' : ' text-2xl text-center drop-shadow-sm mb-1'}>🔴</p>
             <p contentEditable={true} suppressContentEditableWarning={true}
             
