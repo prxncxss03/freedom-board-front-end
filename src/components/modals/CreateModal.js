@@ -55,7 +55,7 @@ export const CreateModal = () => {
                 <button onClick={() => setShowModal(false)} className=" absolute top-0 right-0 m-5"><FaRegTimesCircle size="30" color="white"/></button>
                 <form  action="/" method="post" className="relative flex flex-col bg-white p-3 sm:m-5 rounded-lg shadow-md sm:w-[33rem] w-[20rem]">
 
-                    <label htmlFor="todoItem" className="mb-3   font-bold text-2xl text-center text-orange-700">Enter Your Message</label>
+                    <label htmlFor="todoItem" className="mb-1   font-bold text-2xl text-center text-orange-700">Enter Your Message</label>
                     
                     <textarea autoComplete="off" value={task} onChange={(e) => setTask(e.target.value)} type="text" rows="3" name="todoItem" placeholder='“When life gives you lemons, make lemonade.”'className="scrollbar break-words outline-none border-b-2 mt-3 border-fawn text-base lg:text-xl  text-black px-1 resize-y"/>
                     <div className='mt-3 sm:self-end font-semibold sm:w-[57%] w-full flex sm:flex-row flex-col'>
