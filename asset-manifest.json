@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/freedom-board-front-end/static/css/main.591a9133.css",
-    "main.js": "/freedom-board-front-end/static/js/main.3bcd1a3f.js",
+    "main.css": "/freedom-board-front-end/static/css/main.0d543b24.css",
+    "main.js": "/freedom-board-front-end/static/js/main.6f7f4116.js",
     "static/js/787.c4e7f8f9.chunk.js": "/freedom-board-front-end/static/js/787.c4e7f8f9.chunk.js",
     "static/media/SF-UI-Display-Regular.otf": "/freedom-board-front-end/static/media/SF-UI-Display-Regular.696eab3309b55104976e.otf",
     "index.html": "/freedom-board-front-end/index.html",
-    "main.591a9133.css.map": "/freedom-board-front-end/static/css/main.591a9133.css.map",
-    "main.3bcd1a3f.js.map": "/freedom-board-front-end/static/js/main.3bcd1a3f.js.map",
+    "main.0d543b24.css.map": "/freedom-board-front-end/static/css/main.0d543b24.css.map",
+    "main.6f7f4116.js.map": "/freedom-board-front-end/static/js/main.6f7f4116.js.map",
     "787.c4e7f8f9.chunk.js.map": "/freedom-board-front-end/static/js/787.c4e7f8f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.591a9133.css",
-    "static/js/main.3bcd1a3f.js"
+    "static/css/main.0d543b24.css",
+    "static/js/main.6f7f4116.js"
   ]
 }
