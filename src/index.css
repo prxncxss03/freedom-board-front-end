@@ -75,7 +75,7 @@
     }
 
     .author-name {
-      @apply  bg-clip-text  rounded-full text-transparent bg-gradient-to-r from-amber-800 to-pink-800 font-bold sm:pt-3 pt-1;
+      @apply  bg-clip-text  rounded-full text-transparent bg-gradient-to-r from-amber-800 to-pink-800 font-bold  pt-1;
     }
 
     .color-item{

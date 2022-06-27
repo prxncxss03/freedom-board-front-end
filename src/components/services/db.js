@@ -1,0 +1,1 @@
+export const API_URL = "https://freedom-board-princess.herokuapp.com/api";

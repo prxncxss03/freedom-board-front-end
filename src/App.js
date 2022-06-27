@@ -6,6 +6,8 @@ import axios from 'axios';
 import { Navigation } from './components/Navigation';
 import { CreateModal } from './components/modals/CreateModal';
 import {Footer} from './components/Footer';
+import { API_URL } from './components/services/db';
+
 
 
 function App() {
@@ -27,7 +29,7 @@ function App() {
 
     
 
-    axios.get('https://freedom-board-princess.herokuapp.com/api/').then(result => {
+    axios.get(API_URL).then(result => {
       console.log(result.data.data);
       setListOfTasks(result.data.data);
           // Check if the page has already loaded
@@ -87,6 +89,7 @@ function App() {
                 
 
     )};
+
 
 export default App;
 

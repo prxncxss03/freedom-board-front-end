@@ -1,6 +1,7 @@
 import { useState ,useContext} from 'react';
 import { ColorChange } from '../../helper/Context';
 import axios from 'axios';
+import { API_URL } from '../services/db';
 
 
 export const ColorComponent = ({taskId ,focus}) => {
@@ -50,7 +51,7 @@ export const ColorComponent = ({taskId ,focus}) => {
     
     const handleColor = (color,id) => {
         setColorChange(color);
-        return axios.put(`https://freedom-board-princess.herokuapp.com/api/color/${id}`, {
+        return axios.put(`${API_URL}/color/${id}`, {
             color,
           }).then(result => {
             console.log(`${color}  has been saved`);

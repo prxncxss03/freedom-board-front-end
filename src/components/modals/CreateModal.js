@@ -1,6 +1,7 @@
 import { useContext,useState } from "react";
 import axios from "axios";
 import { FaRegTimesCircle } from "react-icons/fa";
+import { API_URL } from "../services/db.js";
 import { TaskChangeContext ,CreateModalContext,TaskList} from "../../helper/Context.js";
 
 
@@ -17,7 +18,7 @@ export const CreateModal = () => {
     const createTask = (e) => {
        
         e.preventDefault();
-        axios.post('https://freedom-board-princess.herokuapp.com/api', {
+        axios.post(API_URL, {
           text : task || "Empty Message",
           author : author  || "Anonymous",
           color : "bg-nyellow",

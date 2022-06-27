@@ -7,6 +7,7 @@ import { useState,useContext } from 'react';
 import { ColorComponent } from './Color';
 import { formatDate } from '../services/notesFunction';
 import { TaskChangeContext ,Focus,TaskList,ColorChange} from "../../helper/Context.js";
+import { API_URL } from '../services/db';
 
 export const Notes = () => {
     // clipboard 
@@ -63,7 +64,7 @@ export const Notes = () => {
         setTask(newText);
         console.log(`id: ${id}`)
         
-        return axios.put(`https://freedom-board-princess.herokuapp.com/api/${id}`, {
+        return axios.put(`${API_URL}/${id}`, {
             text : newText,
           }).then(result => {
             console.log(`${newText}  has been saved`);
@@ -76,7 +77,7 @@ export const Notes = () => {
     const deleteTask = (id) => {
         setFocus(false);
         
-        axios.delete(`https://freedom-board-princess.herokuapp.com/api/${id}`).then(
+        axios.delete(`${API_URL}/${id}`).then(
             (result) => {
             setFocus(false)
             setListOfTasks(listOfTasks.filter((task) => {
