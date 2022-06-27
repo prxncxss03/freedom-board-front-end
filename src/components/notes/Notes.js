@@ -44,6 +44,10 @@ export const Notes = () => {
         console.log(`focused on ${index}`)
       }
 
+    // handle the clip board
+    // BUG: When the user clicked the clip board for the second time if 
+    // the user doesn't lose focus on the note the clip board will not 
+    // update to change hence, the old text will be copied to the clip board
     const handleClip = () => {
         if(clip) {
             setClip(false)
