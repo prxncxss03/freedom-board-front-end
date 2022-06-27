@@ -58,7 +58,7 @@ export const CreateModal = () => {
                     <label htmlFor="todoItem" className="mb-1   font-bold text-2xl text-center text-orange-700">Enter Your Message</label>
                     
                     <textarea autoComplete="off" value={task} onChange={(e) => setTask(e.target.value)} type="text" rows="3" name="todoItem" placeholder='“When life gives you lemons, make lemonade.”'className="scrollbar break-words outline-none border-b-2 mt-3 border-fawn text-base lg:text-xl  text-black px-1 resize-y"/>
-                    <div className='mt-3 sm:self-end font-semibold sm:w-[57%] w-full flex sm:flex-row flex-col'>
+                    <div className='mt-3 sm:self-end font-semibold sm:w-[59%] w-full flex sm:flex-row flex-col'>
                         <label  htmlFor="author" className="text-base  mr-2 lg:text-xl">by : </label>
                         <input  autoComplete="off" value={author} onChange={(e) => setAuthor(e.target.value)} type="text" name="author" placeholder="John Doe" className=" font-normal break-words outline-none border-b-2 px-1 w-full mt-2 sm:mt-0 sm:w-auto border-fawn text-base lg:text-xl text-black"/>
                     </div>
